@@ -17,7 +17,7 @@
   *                                                                            *
   *  Linking to CSS files:                                                     *
   *   - styles.css for the main design                                         *
-  *   - anim.css for animations and modal popups                               *
+  *   - normalize.css for cross browsers constistancy                          *
   *                                                                            *
   ***************************************************************************-->
   <link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
@@ -43,17 +43,21 @@
 </head>
 
 <body>
+  <!-- "skip link button for accessiblity" -->
+
   <header>
     <nav>
       <h1><a href="/">Restaurant Reviews</a></h1>
+      <a href="#restaurantscontent" class="skip">Skip to resataurants</a>
+
     </nav>
   </header>
 
   <main id="maincontent">
     <section id="map-container">
       <div id="map"></div>
-    </section>
-    <section>
+    </section >
+    <section id="restaurantscontent">
       <div class="filter-options">
         <h2>Filter Results</h2>
         <select id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()">

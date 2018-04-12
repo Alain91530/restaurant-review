@@ -1,7 +1,29 @@
 @charset "utf-8";
 /* CSS Document */
-.rest {
-	max-width: 33.33%
+
+/******************************************************************************/
+/* added for content focus and accessiblity 																	*/
+/******************************************************************************/
+
+.skip {
+		position: absolute;
+		top: -1000px;
+		left: -1000px;
+		height: 1px;
+		width: 1px;
+		text-align: left;
+		overflow: hidden;
+}
+
+a.skip:active,
+a.skip:focus,
+a.skip:hover {
+		left: 0;
+		top: 0;
+		width: auto;
+		height: auto;
+		overflow: visible;
+}
 }
 body,td,th,p{
 	font-family: Arial, Helvetica, sans-serif;
@@ -31,24 +53,19 @@ a img{
 	border: none 0px #fff;
 }
 h1, h2, h3, h4, h5, h6 {
-  font-family: Ubuntu, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   margin: 0 0 20px;
 }
 article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
-/*	display: block;*/
+	display: block;
 }
 #maincontent {
   background-color: #f3f3f3;
   min-height: 100%;
-	display: flex;
-	flex-flow: wrap;
-	max-width: 900px;
 }
 
 main {
-/*	display: flex;
-	flex-flow: wrap;*/
-	max-width: 900px;
+
 }
 
 #footer {
