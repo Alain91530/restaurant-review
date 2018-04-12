@@ -43,11 +43,11 @@
 </head>
 
 <body>
-  <!-- "skip link button for accessiblity" -->
 
   <header>
     <nav>
       <h1><a href="/">Restaurant Reviews</a></h1>
+      <!-- "skip link button for accessiblity" and avoid the map -->
       <a href="#restaurantscontent" class="skip">Skip to resataurants</a>
 
     </nav>
@@ -55,7 +55,8 @@
 
   <main id="maincontent">
     <section id="map-container">
-      <div id="map"></div>
+      <div tabindex="1"id="map"><h2 class="test"> map of the area</h2>
+</div>
     </section >
     <section id="restaurantscontent">
       <div class="filter-options">
@@ -67,7 +68,7 @@
           <option value="all">All Cuisines</option>
         </select>
       </div>
-      <ul id="restaurants-list"></ul>
+      <ul id="restaurants-list" class="restaurants-container"></ul>
     </section>
   </main>
 
