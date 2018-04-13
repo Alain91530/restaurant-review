@@ -1,6 +1,10 @@
 @charset "utf-8";
 /* CSS Document */
 
+/* Added for responsiveness of home page */
+#map-container {
+	width: 100%;
+}
 .restaurants-container {
 	display: flex;
 	flex-flow: wrap;
@@ -108,7 +112,7 @@ nav h1 a {
     background-color: #eee;
     font-size: 17px;
     margin: 0;
-    width: calc(50% - 80px);
+/*    width: calc(50% - 80px); */
 }
 
 /* Display list items side by side */
@@ -176,7 +180,7 @@ nav h1 a {
 	display: flex;
 	flex-flow: wrap;
 	flex-direction: row;
-	justify-content: normal;
+	justify-content: space-evenly;
 }
 #restaurants-list li {
   background-color: #fff;
@@ -227,7 +231,7 @@ nav h1 a {
 /* ====================== Restaurant Details ====================== */
 .restaurant-infos {
 	order: 1;
-	width: 50%;
+	width: 80%;
 }
 .inside header {
   position: fixed;
@@ -238,11 +242,10 @@ nav h1 a {
 .inside #map-container {
   background: blue none repeat scroll 0 0;
   height: 100vh;
-/*  position: absolute;*/
-	order:2;
+	order: 1;
   right: 0;
-  top: 80px;
-  width: 50%;
+	top: 80px;
+	width: 100%;
 }
 .inside #map {
   background-color: #ccc;
@@ -319,4 +322,17 @@ nav h1 a {
 }
 #restaurant-hours td {
   color: #666;
+}
+
+@media screen and (orientation: landscape) {
+	#breadcrumb {
+	    width: calc(50% - 80px);
+	}
+	.inside #map-container {
+		position: fixed;
+		width: 50%
+	}
+	.restaurant-infos {
+		width: 50%;
+	}
 }
