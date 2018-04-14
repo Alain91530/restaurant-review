@@ -231,7 +231,6 @@ nav h1 a {
 /* ====================== Restaurant Details ====================== */
 .restaurant-infos {
 	order: 1;
-	width: 80%;
 }
 .inside header {
   position: fixed;
@@ -289,8 +288,7 @@ nav h1 a {
 #restaurant-container, #reviews-container {
   border-bottom: 1px solid #d9d9d9;
   border-top: 1px solid #fff;
-  padding: 140px 40px 30px;
-  width: 100%;
+  padding: 5vh 40px 30px;
 }
 #reviews-container {
   padding: 30px 40px 80px;
@@ -301,6 +299,7 @@ nav h1 a {
   font-weight: 300;
   letter-spacing: -1px;
   padding-bottom: 1pt;
+	width: calc(100%-80px);
 }
 #reviews-list {
   margin: 0;
@@ -314,7 +313,7 @@ nav h1 a {
   margin: 0 0 30px;
   overflow: hidden;
   padding: 0 20px 20px;
-  position: relative;
+/*  position: relative; */
   width: 85%;
 }
 #reviews-list li p {
@@ -326,12 +325,18 @@ nav h1 a {
 
 @media screen and (orientation: landscape) {
 	#breadcrumb {
-	    width: calc(50% - 80px);
+	    width: calc(100%-80px);
 	}
+
+	#restaurant-container {
+		padding: 15vh 40px 30px;
+	}
+
 	.inside #map-container {
 		position: fixed;
 		width: 50%
 	}
+
 	.restaurant-infos {
 		width: 50%;
 	}
