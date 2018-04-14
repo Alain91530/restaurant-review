@@ -98,6 +98,8 @@ nav {
 }
 nav h1 {
   margin: auto;
+	font-size: 4.5vh;
+	line-height: 0.9em;
 }
 nav h1 a {
   color: #fff;
