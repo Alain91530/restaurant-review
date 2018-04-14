@@ -1,7 +1,7 @@
 @charset "utf-8";
 /* CSS Document */
 
-/* Added for responsiveness of home page */
+/* Added for responsiveness*/
 #map-container {
 	width: 100%;
 }
@@ -326,6 +326,9 @@ nav h1 a {
 }
 
 @media screen and (orientation: landscape) {
+	nav h1 {
+		line-height: 50px;
+}
 	#breadcrumb {
 	    width: calc(100%-80px);
 	}
