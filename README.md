@@ -62,7 +62,7 @@ Realisation of project: Alain CADENAT
 
 - Program uses ES6 JavaScript instruction set, browser must be compatible. or visit https://babeljs.io/ to transpile it.
 - The project uses JSON, browser must be of a sufficiently recent verion to be able to store and restore data.   
-- To tun offline the project uses a serviceworker. If your browser doesn't support service workers it will run but be able to run offline. You can check browser compatibility on Jake Archibald's service worker page:  https://jakearchibald.github.io/isserviceworkerready/
+- To run offline the project uses a serviceworker. If your browser doesn't support service workers it will run but be able to run offline. You can check browser compatibility on Jake Archibald's service worker page:  https://jakearchibald.github.io/isserviceworkerready/
 
 ### License
 MIT License

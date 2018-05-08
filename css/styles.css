@@ -243,6 +243,7 @@ nav h1 a {
 .inside #map-container {
   background: blue none repeat scroll 0 0;
   height: 100vh;
+	margin-top: 10vh;
 	order: 1;
   right: 0;
 	top: 80px;
@@ -338,7 +339,9 @@ nav h1 a {
 	}
 
 	.inside #map-container {
+		height: 80vh;
 		position: fixed;
+		top: 11vh;
 		width: 50%
 	}
 
