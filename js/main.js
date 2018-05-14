@@ -171,12 +171,12 @@ fillRestaurantsHTML = (restaurants = self.restaurants) => {
  */
 createRestaurantHTML = (restaurant) => {
   const li = document.createElement('li');
-
+console.log(restaurant)
   const image = document.createElement('img');
   image.className = 'restaurant-img';
   image.tabIndex = 0;
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
-  image.alt = DBHelper.altTextForRestaurant(restaurant)
+  image.alt = `${restaurant.name}: ${restaurant.altPhoto}`;
   li.append(image);
 
   const name = document.createElement('h1');
@@ -185,10 +185,12 @@ createRestaurantHTML = (restaurant) => {
 
   const neighborhood = document.createElement('p');
   neighborhood.innerHTML = restaurant.neighborhood;
+  neighborhood.tabIndex = 0;
   li.append(neighborhood);
 
   const address = document.createElement('p');
   address.innerHTML = restaurant.address;
+  address.tabIndex = 0;
   li.append(address);
 
   const more = document.createElement('a');
@@ -207,7 +209,7 @@ createRestaurantHTML = (restaurant) => {
  * Add markers for current restaurants to the map.
  */
 addMarkersToMap = (restaurants = self.restaurants) => {
-  // Invike Google map only if online
+  // Invoke Google map only if online
   if (navigator.onLine) {
     restaurants.forEach(restaurant => {
     // Add marker to the map
