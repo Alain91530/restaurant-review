@@ -1,5 +1,4 @@
 # Fend Nano Degree project 6
----
 
 ## Restaurant review: Stage 1
 
@@ -10,61 +9,73 @@ The project is simple application providing a map area of New York withe similat
 We have been provided the code for a restaurant reviews website. The code has a lot of issues.
 
 The project consist in changing the code to add the following features:
+
 - Grid type display of the restaurants on main page to have more useable.
 - Responsive with all mordern devices
 - Accessiblity with keyboard navigation and pertinent focus
 - Available offline with the use of a service worker
 
+### What has been done
+
+- __Service Worker__
+
+A servive worker is registered, static resources are cached on installation of it. It then serve an offline-first policy  
+Offline state is detected with navigator.online and a static map is displayed as Google Map cannot be cached as mer the trems of usage of Google.
+
+- __Responsiveness__
+
+  - Flexbox design
+  - Relative units
+  - Media queries and appropriate breakpoints
+
+- __Acssessibility__
+
+  - Color sheme change to have a better contrast and pass aXe accessiblity audit
+  - Hidden link to skip focusing the map and in the map if wanted.
+  - tabIndex=0 added at proper eleemnts to manage focus adequatly
+  - alt text added to pictures. Choice has been made to add the alt text to the json "datababase" to be able to have a specific text for each restaurant and not only a generic one like "photo of $RESTAURANT-NAME restaurant"
+
 ### version
 
-_V1.00_ 04/xx/2018
+_V 0.00_ 05/xx/2018
 
-### Installation ###
+### Installation
 
 Clone repository or download files.
 Go to the project directory.
 You need a localserver to be able to run the service worker.
+
 Python can setup one very simple, To set it up:
-1. Check your Python version. In a terminal type: `python -V`.
+
+- Check your Python version. In a terminal type: `python -V`.
   - If you have Python 2.x, type `python -m SimpleHTTPServer 8000` (or some other port, if port 8000 is already in use. If you need to use another port you must change the `const = 8000` iat the beginning of dhelper.js file according to the port you use).
-  - For Python 3.x, you can use `python3 -m http.server 8000`.  
+  - For Python 3.x, you can use `python3 -m http.server 8000`.
 
 If you don't have Python installed, navigate to Python's [website](https://www.python.org/) to download and install the software.
 
-With your server running, visit the site: `http://localhost:8000` to laucnch the project.
+- With your server running, visit the site: `http://localhost:8000` to laucnch the project.
 
-### Realisation ###
-Game is made with html5, CSS and JavaScript. It also uses Ubuntu Google font, awesome font with https://www.bootstrapcdn.com/.
+### Realisation
 
-Choice of the author is to make the game logic with JavaScript and the design with CSS. The JavaScript program acting only to set or unset the proper classes in accordance of the desired display. In rare occasions the content of the DOM needs to be changed:
-* Cards shuffling
-* Timer
-* Star score
+### Documentation
 
-So the html sets a complete first design of a stopped game. Then while playing the JavaScript set the classes to change the design and flip the cards, display  matching or not matching cards, and so on...
+### Authors
 
-Modal popups have been designed with 2 different methods:
-* Rules popup using only CSS
-* End of game popup CSS and JavaScript.
-
-### Documentation ###
-Detailed documentation of the project in <a href="https://github.com/Alain91530/memory/blob/master/docs/DOCUMENTATION.md">DOCUMENTATION.MD</a>
-
-### Authors ###
-
-Original code:  https://www.udacity.com  
 Realisation of project: Alain CADENAT
 
-### Credits ###
+### Credits
 
+- _Original code:_  [Udacity](https://www.udacity.com)
+- _Cartography data_: Google
 
-### Limitations ###
+### Limitations
 
-- Program uses ES6 JavaScript instruction set, browser must be compatible. or visit https://babeljs.io/ to transpile it.
-- The project uses JSON, browser must be of a sufficiently recent verion to be able to store and restore data.   
-- To run offline the project uses a serviceworker. If your browser doesn't support service workers it will run but be able to run offline. You can check browser compatibility on Jake Archibald's service worker page:  https://jakearchibald.github.io/isserviceworkerready/
+- Program uses ES6 JavaScript instruction set, browser must be compatible. or visit [babel](https://babeljs.io/) to transpile it.
+- The project uses JSON, browser must be of a sufficiently recent verion to be able to store and restore data.
+- To run offline the project uses a serviceworker. If your browser doesn't support service workers it will run but won't be able to run offline. You can check browser compatibility on [Jake Archibald's service worker page](https://jakearchibald.github.io/isserviceworkerready/)
 
 ### License
+
 MIT License
 
 Copyright (c) 2018 Alain CADENAT

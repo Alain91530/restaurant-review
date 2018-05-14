@@ -11,19 +11,6 @@
 	flex-direction: row;
 	justify-content: space-even;
 }
-/******************************************************************************/
-/* added for content focus and accessiblity 																	*/
-/******************************************************************************/
-
-.skip {
-		position: absolute;
-		top: -1000px;
-		left: -1000px;
-		height: 1px;
-		width: 1px;
-		text-align: left;
-		overflow: hidden;
-}
 
 a.skip:active,
 a.skip:focus,
@@ -56,7 +43,7 @@ a {
 	text-decoration: none;
 }
 a:hover, a:focus {
-	color: #3397db;
+	color: lightblue;
 	text-decoration: none;
 }
 a img{
@@ -75,10 +62,6 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
   min-height: 100%;
 	display: flex;
 	flex-flow: wrap;
-}
-
-main {
-
 }
 
 #footer {
@@ -132,13 +115,13 @@ nav h1 a {
 
 /* Add a color to all links inside the list */
 #breadcrumb li a {
-    color: #0275d8;
+    color: blue;
     text-decoration: none;
 }
 
 /* Add a color on mouse-over */
 #breadcrumb li a:hover {
-    color: #01447e;
+    color: lightblue;
     text-decoration: underline;
 }
 /* ====================== Map ====================== */
@@ -262,7 +245,7 @@ nav h1 a {
   width: 100%;
 }
 #restaurant-name {
-  color: #f18200;
+  color: #1b4a80;
   font-family: Arial,sans-serif;
   font-size: 20pt;
   font-weight: 200;
@@ -299,7 +282,7 @@ nav h1 a {
   padding: 30px 40px 80px;
 }
 #reviews-container h2 {
-  color: #f58500;
+  color: #1b4a80;
   font-size: 24pt;
   font-weight: 300;
   letter-spacing: -1px;
@@ -318,7 +301,6 @@ nav h1 a {
   margin: 0 0 30px;
   overflow: hidden;
   padding: 0 20px 20px;
-/*  position: relative; */
   width: 85%;
 }
 #reviews-list li p {
@@ -351,3 +333,16 @@ nav h1 a {
 		width: 50%;
 	}
 }
+
+/*============= added for content focus and accessiblity ==================== */
+.skip {
+  position: absolute;
+  top: -1000px;
+  left: -1000px;
+  height: 1px;
+  width: 1px;
+  text-align: left;
+  overflow: hidden;
+}
+
+/*================== added for responsiveness =============================== */
