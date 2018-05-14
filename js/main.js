@@ -19,7 +19,19 @@ const fixMapAria = () => {
 document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('offline', () => {location.reload()});
   window.addEventListener('online', () => {location.reload()});
+  /*
+ * Register the service worker
+ */
 
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('cache-sw.js')
+      .then(function() {
+        console.log('Registration worked!');
+      })
+      .catch(function() {
+        console.log('Registration failed!');
+      });
+  }
   fetchNeighborhoods();
   fetchCuisines();
 });
