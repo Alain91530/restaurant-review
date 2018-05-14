@@ -13,8 +13,13 @@ const fixMapAria = () => {
 
 /**
  * Fetch neighborhoods and cuisines as soon as the page is loaded.
+ * and set events to detect if online or offline to render or not google
+ * map.
  */
-document.addEventListener('DOMContentLoaded', (event) => {
+document.addEventListener('DOMContentLoaded', () => {
+  window.addEventListener('offline', () => {location.reload()});
+  window.addEventListener('online', () => {location.reload()});
+
   fetchNeighborhoods();
   fetchCuisines();
 });
