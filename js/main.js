@@ -5,6 +5,13 @@ var map;
 var markers = [];
 
 /**
+ * Set a title to map iframe as per aria specs
+ */
+const fixMapAria = () => {
+  document.querySelector('iframe').title='map of the area';
+};
+
+/**
  * Fetch neighborhoods and cuisines as soon as the page is loaded.
  */
 document.addEventListener('DOMContentLoaded', (event) => {
@@ -83,6 +90,7 @@ window.initMap = () => {
     center: loc,
     scrollwheel: false
   });
+  google.maps.event.addListenerOnce(map, 'tilesloaded', fixMapAria);
   updateRestaurants();
 };
 

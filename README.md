@@ -34,6 +34,9 @@ Offline state is detected with navigator.online and a static map is displayed as
   - Hidden link to skip focusing the map and in the map if wanted.
   - tabIndex=0 added at proper eleemnts to manage focus adequatly
   - alt text added to pictures. Choice has been made to add the alt text to the json "datababase" to be able to have a specific text for each restaurant and not only a generic one like "photo of $RESTAURANT-NAME restaurant"
+  - Title added to google map iframe.
+
+  the html tag without a language can't be fixed
 
 ### version
 

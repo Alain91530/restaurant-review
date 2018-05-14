@@ -14,11 +14,19 @@ window.initMap = () => {
         center: restaurant.latlng,
         scrollwheel: false
       });
+      google.maps.event.addListenerOnce(map, 'tilesloaded', fixMapAria);
       fillBreadcrumb();
       DBHelper.mapMarkerForRestaurant(self.restaurant, self.map);
     }
   });
-}
+};
+
+/**
+ * Set a title to map iframe as per aria specs
+ */
+const fixMapAria = () => {
+  document.querySelector('iframe').title='map of the area';
+};
 
 /**
  * Get current restaurant from page URL.
@@ -51,6 +59,7 @@ fetchRestaurantFromURL = (callback) => {
 fillRestaurantHTML = (restaurant = self.restaurant) => {
   const name = document.getElementById('restaurant-name');
   name.innerHTML = restaurant.name;
+  name.tabIndex = 0;
 
   const address = document.getElementById('restaurant-address');
   address.innerHTML = restaurant.address;
@@ -59,6 +68,7 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
   image.className = 'restaurant-img'
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
   image.alt = DBHelper.altTextForRestaurant(restaurant);
+  image.tabIndex = 0;
 
   const cuisine = document.getElementById('restaurant-cuisine');
   cuisine.innerHTML = restaurant.cuisine_type;
