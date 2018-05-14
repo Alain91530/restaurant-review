@@ -19,8 +19,8 @@ The project consist in changing the code to add the following features:
 
 - __Service Worker__
 
-A servive worker is registered, static resources are cached on installation of it. It then serve an offline-first policy  
-Offline state is detected with navigator.online and a static map is displayed as Google Map cannot be cached as mer the trems of usage of Google.
+A service worker is registered, static resources are cached on installation of it. It then serve an offline-first policy  
+Offline state is detected with navigator.online and a static map is displayed as Google Map cannot be cached as mer the terms of usage of Google.
 
 - __Responsiveness__
 
