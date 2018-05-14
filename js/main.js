@@ -7,9 +7,9 @@ var markers = [];
 /**
  * Set a title to map iframe as per aria specs
  */
-const fixMapAria = () => {
+function fixMapAria() {
   document.querySelector('iframe').title='map of the area';
-};
+}
 
 /**
  * Fetch neighborhoods and cuisines as soon as the page is loaded.
@@ -102,12 +102,18 @@ window.initMap = () => {
     lat: 40.722216,
     lng: -73.987501
   };
-  self.map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 12,
-    center: loc,
-    scrollwheel: false
-  });
-  google.maps.event.addListenerOnce(map, 'tilesloaded', fixMapAria);
+  // Invoke Google map only if online
+  if (navigator.onLine) {
+    self.map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 12,
+      center: loc,
+      scrollwheel: false
+    });
+    google.maps.event.addListenerOnce(map, 'tilesloaded', fixMapAria);
+  }
+  else {
+    document.getElementById('map').innerHTML='<h2 class="offlinemap">Offline map only</h2>';
+  }
   updateRestaurants();
 };
 
@@ -201,12 +207,15 @@ createRestaurantHTML = (restaurant) => {
  * Add markers for current restaurants to the map.
  */
 addMarkersToMap = (restaurants = self.restaurants) => {
-  restaurants.forEach(restaurant => {
+  // Invike Google map only if online
+  if (navigator.onLine) {
+    restaurants.forEach(restaurant => {
     // Add marker to the map
-    const marker = DBHelper.mapMarkerForRestaurant(restaurant, self.map);
-    google.maps.event.addListener(marker, 'click', () => {
-      window.location.href = marker.url;
+      const marker = DBHelper.mapMarkerForRestaurant(restaurant, self.map);
+      google.maps.event.addListener(marker, 'click', () => {
+        window.location.href = marker.url;
+      });
+      self.markers.push(marker);
     });
-    self.markers.push(marker);
-  });
+  }
 };

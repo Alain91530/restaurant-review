@@ -311,6 +311,26 @@ nav h1 a {
   color: #666;
 }
 
+/*============= added for content focus and accessiblity ==================== */
+.skip {
+  position: absolute;
+  top: -1000px;
+  left: -1000px;
+  height: 1px;
+  width: 1px;
+  text-align: left;
+  overflow: hidden;
+}
+
+/*============== added for offline gracefull handling ========================*/
+.offlinemap {
+  background-image: url(../img/offlinemap.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 400px;
+  width: 100%;}
+/*================== added for responsiveness =============================== */
+
 @media screen and (orientation: landscape) {
 	nav h1 {
 		line-height: 50px;
@@ -334,16 +354,3 @@ nav h1 a {
 		width: 50%;
 	}
 }
-
-/*============= added for content focus and accessiblity ==================== */
-.skip {
-  position: absolute;
-  top: -1000px;
-  left: -1000px;
-  height: 1px;
-  width: 1px;
-  text-align: left;
-  overflow: hidden;
-}
-
-/*================== added for responsiveness =============================== */

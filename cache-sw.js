@@ -16,6 +16,7 @@ let filesToCache = [
   'img/9.jpg',
   'img/10.jpg',
   'img/favicon.png',
+  'img/offlinemap.png',
   '/data/restaurants.json'
 ];
 
