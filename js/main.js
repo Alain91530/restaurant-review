@@ -1,3 +1,6 @@
+/**
+ * Global vars
+ */
 let restaurants;
 let neighborhoods;
 let cuisines;
@@ -196,7 +199,9 @@ createRestaurantHTML = (restaurant) => {
   more.innerHTML = 'View Details';
   more.href = DBHelper.urlForRestaurant(restaurant);
 
-  /* change the text of the link for focus to be more explicit                */
+  /**
+   *  change the text of the link for focus to be more explicit.
+   */
   more.setAttribute('aria-label', `View details for ${restaurant.name}`);
 
   li.append(more);
