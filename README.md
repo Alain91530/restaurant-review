@@ -2,7 +2,7 @@
 
 ## Restaurant review: Stage 1
 
-The project is simple application providing a map area of New York withe similated database of restaurants (a json file) where data are stored and accessed asynchroneously. Under the map known restaurants are briefly presented with a view more button. A click on this button loads a new page showing the restaurant's details and a list of review of the restaurants.
+The project is an application providing a map area of New York with a simulated database of restaurants (a json file) where data are stored and accessed asynchroneously. Under the map known restaurants are briefly presented with a view more button. A click on this button loads a new page showing the restaurant's details and a list of review of the restaurants.
 
 ### Specification
 
@@ -11,7 +11,7 @@ We have been provided the code for a restaurant reviews website. The code has a 
 The project consist in changing the code to add the following features:
 
 - Grid type display of the restaurants on main page to have more useable.
-- Responsive with all mordern devices
+- Responsive with all modern devices
 - Accessiblity with keyboard navigation and pertinent focus
 - Available offline with the use of a service worker
 
@@ -20,7 +20,7 @@ The project consist in changing the code to add the following features:
 - __Service Worker__
 
 A service worker is registered, static resources are cached on installation of it. It then serve an offline-first policy  
-Offline state is detected with navigator.online and a static map is displayed as Google Map cannot be cached as mer the terms of usage of Google.
+Offline state is detected with navigator.online and a static map is displayed as Google Map cannot be cached as per the terms of usage of Google.
 
 - __Responsiveness__
 
@@ -32,15 +32,13 @@ Offline state is detected with navigator.online and a static map is displayed as
 
   - Color sheme change to have a better contrast and pass aXe accessiblity audit
   - Hidden link to skip focusing the map and in the map if wanted.
-  - tabIndex=0 added at proper eleemnts to manage focus adequatly
+  - tabIndex=0 added at proper elements to manage focus adequatly
   - alt text added to pictures. Choice has been made to add the alt text to the json "datababase" to be able to have a specific text for each restaurant and not only a generic one like "photo of $RESTAURANT-NAME restaurant"
-  - Title added to google map iframe.
-
-  the html tag without a language can't be fixed
+  - Title added to google map iframe. The html tag without a language can't be fixed
 
 ### version
 
-_V 0.00_ 05/xx/2018
+_V 0.9_ 05/15/2018
 
 ### Installation
 
@@ -57,10 +55,6 @@ Python can setup one very simple, To set it up:
 If you don't have Python installed, navigate to Python's [website](https://www.python.org/) to download and install the software.
 
 - With your server running, visit the site: `http://localhost:8000` to laucnch the project.
-
-### Realisation
-
-### Documentation
 
 ### Authors
 
