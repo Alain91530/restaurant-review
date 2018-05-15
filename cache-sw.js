@@ -5,6 +5,7 @@ let filesToCache = [
   'js/dbhelper.js',
   'js/restaurant_info.js',
   'css/styles.css',
+  'css/normalize.css',
   'img/1.jpg',
   'img/2.jpg',
   'img/3.jpg',

@@ -324,8 +324,16 @@ nav h1 a {
   background-size: cover;
   background-repeat: no-repeat;
   height: 400px;
-  width: 100%;}
+  width: 100%;
+}
 
+.offlinemap-rest {
+  background-image: url(../img/offlinemap.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 55%;
+  padding: 20vh;
+}
 /*================== added for responsiveness =============================== */
 
 @media screen and (orientation: landscape) and (min-width: 641px) {

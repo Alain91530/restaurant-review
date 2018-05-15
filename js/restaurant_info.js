@@ -21,8 +21,11 @@ window.initMap = () => {
         });
         google.maps.event.addListenerOnce(map, 'tilesloaded', fixMapAria);
         DBHelper.mapMarkerForRestaurant(self.restaurant, self.map);
-
       }
+    else {
+      document.getElementById('map').innerHTML='<h2 class="offlinemap-rest">Offline map only</h2>';
+
+    }
       fillBreadcrumb();
     }
   });

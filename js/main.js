@@ -20,8 +20,8 @@ function fixMapAria() {
  * map.
  */
 document.addEventListener('DOMContentLoaded', () => {
-  window.addEventListener('offline', () => {location.reload()});
-  window.addEventListener('online', () => {location.reload()});
+/*  window.addEventListener('offline', () => {location.reload()});
+  window.addEventListener('online', () => {location.reload()}); */
   /*
  * Register the service worker
  */
